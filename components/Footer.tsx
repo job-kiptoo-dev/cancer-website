@@ -2,14 +2,16 @@
 
 
 import logo from "@/assets/logo.png";
+import Image from "next/image";
 
-const Footer = () => (
+export default function Footer() {
+return(
   <footer className="border-t border-glass py-16">
     <div className="container mx-auto px-6 lg:px-10">
       <div className="grid md:grid-cols-3 gap-12 mb-12">
         <div>
           <div className="flex items-center gap-3 mb-4">
-            <img src={logo} alt="Logo" width={28} height={28} loading="lazy" />
+            <Image src={logo} alt="Logo" width={28} height={28} loading="lazy" />
             <span className="font-display text-lg text-foreground tracking-tight">CFBF.</span>
           </div>
           <p className="font-body text-sm text-muted-foreground leading-relaxed font-light">
@@ -44,7 +46,7 @@ const Footer = () => (
       </div>
     </div>
   </footer>
-);
+)
+}
 
-export default Footer;
 

@@ -12,7 +12,9 @@ const features = [
   { icon: Link, title: "Full Traceability", desc: "From soursop seedlings to education sponsorships — everything is on-chain." },
 ];
 
-const BlockchainSection = () => {
+
+export default function BlockchainSection() {
+
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-80px" });
 
@@ -58,7 +60,5 @@ const BlockchainSection = () => {
       </div>
     </section>
   );
-};
-
-export default BlockchainSection;
+}
 

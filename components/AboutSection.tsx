@@ -2,7 +2,8 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
-const AboutSection = () => {
+
+export default function AboutSection() {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-100px" });
 
@@ -62,7 +63,5 @@ const AboutSection = () => {
       </div>
     </section>
   );
-};
-
-export default AboutSection;
+}
 

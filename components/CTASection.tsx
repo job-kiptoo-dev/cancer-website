@@ -4,7 +4,8 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { Heart } from "lucide-react";
 
-const CTASection = () => {
+
+export default function CTASection() {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-80px" });
 
@@ -48,7 +49,7 @@ const CTASection = () => {
       </div>
     </section>
   );
-};
 
-export default CTASection;
+}
+
 

@@ -35,7 +35,7 @@ const pillars = [
   },
 ];
 
-const PillarsSection = () => {
+export default function PillarSection() {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-80px" });
 
@@ -85,7 +85,7 @@ const PillarsSection = () => {
       </div>
     </section>
   );
-};
+}
 
-export default PillarsSection;
+
 

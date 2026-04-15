@@ -5,6 +5,7 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { TreePine, Leaf, Heart, Sun } from "lucide-react";
 import soursopImg from "@/assets/soursop.jpg";
+import Image from "next/image";
 
 const benefits = [
   { icon: Leaf, text: "Rich in acetogenins & antioxidants" },
@@ -13,7 +14,7 @@ const benefits = [
   { icon: TreePine, text: "Sustainable community orchards" },
 ];
 
-const SoursopSection = () => {
+export default function SourSoupSection() {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-80px" });
 
@@ -29,7 +30,7 @@ const SoursopSection = () => {
             className="relative"
           >
             <div className="relative p-1 border border-glass-gold bg-glass rounded-sm overflow-hidden">
-              <img
+              <Image
                 src={soursopImg}
                 alt="Fresh soursop fruit on tree"
                 width={800}
@@ -84,7 +85,4 @@ const SoursopSection = () => {
       </div>
     </section>
   );
-};
-
-export default SoursopSection;
-
+}

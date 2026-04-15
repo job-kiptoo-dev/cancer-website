@@ -5,6 +5,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import logo from "@/assets/logo.png";
+import Image from "next/image";
 
 const navLinks = [
   { label: "About", href: "#about" },
@@ -14,14 +15,15 @@ const navLinks = [
   { label: "Impact", href: "#impact" },
 ];
 
-const Navbar = () => {
+
+export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-glass border-b border-glass">
       <div className="container mx-auto flex items-center justify-between h-18 px-6 lg:px-10">
         <a href="#" className="flex items-center gap-3">
-          <img src={logo} alt="Cancer Free Foundation Logo" width={32} height={32} />
+          <Image src={logo} alt="Cancer Free Foundation Logo" width={32} height={32} />
           <div className="flex flex-col">
             <span className="font-display text-lg tracking-tight text-foreground leading-tight">
               CFBF.
@@ -91,6 +93,6 @@ const Navbar = () => {
       </AnimatePresence>
     </nav>
   );
-};
+}
 
-export default Navbar;
+

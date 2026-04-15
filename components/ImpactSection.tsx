@@ -13,7 +13,8 @@ const objectives = [
   { num: "06", title: "Systemic Change", target: "Collaborating with government to integrate blockchain-enabled cancer prevention" },
 ];
 
-const ImpactSection = () => {
+
+export default function ImpactSection() {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-80px" });
 
@@ -56,7 +57,4 @@ const ImpactSection = () => {
       </div>
     </section>
   );
-};
-
-export default ImpactSection;
-
+}

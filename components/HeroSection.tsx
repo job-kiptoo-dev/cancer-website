@@ -3,12 +3,15 @@
 
 import { motion } from "framer-motion";
 import heroBg from "@/assets/hero-bg.jpg";
+import Image from "next/image";
 
-const HeroSection = () => (
+export default function HeroSection() {
+return(
+
   <section className="relative min-h-screen flex items-center overflow-hidden">
     {/* Atmospheric Background */}
     <div className="absolute inset-0">
-      <img
+      <Image
         src={heroBg}
         alt="Kenyan community garden"
         width={1920}
@@ -77,7 +80,7 @@ const HeroSection = () => (
         >
           {/* Main Image Card */}
           <div className="col-span-2 relative h-56 lg:h-64 bg-glass border border-glass-gold rounded-sm overflow-hidden shadow-elevated">
-            <img
+            <Image
               src={heroBg}
               alt="Community impact"
               className="w-full h-full object-cover opacity-50 mix-blend-luminosity"
@@ -132,7 +135,7 @@ const HeroSection = () => (
       </div>
     </div>
   </section>
-);
+)
+}
 
-export default HeroSection;
 

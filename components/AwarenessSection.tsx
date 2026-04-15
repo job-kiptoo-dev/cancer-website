@@ -1,6 +1,5 @@
 "use client"
 
-
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { AlertTriangle, Salad, Ban, Wheat } from "lucide-react";
@@ -12,7 +11,8 @@ const tips = [
   { icon: AlertTriangle, title: "Know the Signs", text: "Learn the CAUTION acronym — the seven warning signs of cancer for early detection." },
 ];
 
-const AwarenessSection = () => {
+export default function AwarenessSection() {
+
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-80px" });
 
@@ -58,7 +58,5 @@ const AwarenessSection = () => {
       </div>
     </section>
   );
-};
-
-export default AwarenessSection;
+}
 
