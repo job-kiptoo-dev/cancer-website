@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..400&family=Manrope:wght@200..700&display=swap');
+
 @import "tailwindcss";
 
 /* 1. Theme Configuration (The v4 way) */
@@ -52,7 +54,6 @@
 
 /* 2. Base Styles */
 @layer base {
-  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..400&family=Manrope:wght@200..700&display=swap');
 
   * {
     @apply border-border outline-ring/50;
