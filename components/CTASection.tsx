@@ -3,6 +3,7 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { Heart } from "lucide-react";
+import Link from "next/link";
 
 
 export default function CTASection() {
@@ -31,13 +32,13 @@ export default function CTASection() {
             <strong className="text-gold font-medium"> Be the change.</strong>
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="mailto:info@cancerfreeblockchain.org"
-              className="inline-flex items-center gap-3 px-10 py-4 bg-gold text-gold-foreground font-body font-medium text-sm tracking-[0.1em] uppercase hover:bg-gold-glow transition-colors duration-500"
+            <Link
+              href="/donate"
+              className="inline-flex items-center gap-3 px-10 py-4 bg-gold text-gold-foreground font-body font-medium text-sm tracking-[0.1em] uppercase hover:bg-gold-glow/25 transition-colors duration-500"
             >
               <Heart size={18} />
               Donate Now
-            </a>
+            </Link>
             <a
               href="mailto:info@cancerfreeblockchain.org"
               className="px-10 py-4 border border-foreground/20 text-foreground font-body font-medium text-sm tracking-[0.1em] uppercase hover:border-gold/40 transition-colors duration-500"
