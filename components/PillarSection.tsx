@@ -49,11 +49,14 @@ export default function PillarSection() {
           transition={{ duration: 0.8 }}
           className="text-center mb-20"
         >
-          <span className="font-body text-xs font-medium tracking-[0.2em] uppercase text-gold">
+          {/* <span className="font-body text-xs font-medium tracking-[0.2em] uppercase text-gold"> */}
+                          <span className="font-body text-sm md:text-base font-medium tracking-[0.2em] uppercase text-gold">
+
             Holistic Support
           </span>
-          <h2 className="font-display text-4xl md:text-6xl font-light text-foreground mt-4 tracking-tight">
-            Four Pillars of <span className="italic text-gold">Impact</span>
+          {/* <h2 className="font-display text-4xl md:text-6xl font-light text-foreground mt-4 tracking-tight"> */}
+          <h2 className="font-display text-5xl md:text-7xl font-light text-foreground mt-4 tracking-tight">
+            Four Pillars of <span className="italic text-pink-200">Impact</span>
           </h2>
         </motion.div>
 
@@ -67,15 +70,19 @@ export default function PillarSection() {
               className="group bg-background p-8 hover:bg-accent/30 transition-colors duration-700 flex flex-col"
             >
               <div className="flex items-center justify-between mb-10">
-                <span className="font-body text-gold-dim text-sm tabular-nums tracking-widest">
+
+                {/* <span className="font-body text-gold-dim text-sm tabular-nums tracking-widest"> */}
+                {/* <span className="font-body text-sm md:text-base font-medium tracking-[0.2em] uppercase text-gold"> */}
+                <span className="font-body text-base text-gold-dim tabular-nums tracking-widest">
                   {pillar.num}
                 </span>
                 <div className="w-10 h-10 rounded-sm bg-gold/10 flex items-center justify-center group-hover:bg-gold/20 transition-colors duration-500">
                   <pillar.icon size={20} className="text-gold" />
                 </div>
               </div>
-              <h3 className="font-display text-xl text-foreground mb-3">{pillar.title}</h3>
-              <p className="font-body text-sm text-muted-foreground leading-relaxed font-light flex-1">
+<h3 className="font-display text-2xl md:text-3xl text-foreground mb-4">
+              {pillar.title}</h3>
+              <p className="font-body text-base md:text-lg text-muted-foreground leading-relaxed font-light flex-1">
                 {pillar.description}
               </p>
               <div className="mt-8 h-px w-8 bg-gold-dim/50 group-hover:w-full group-hover:bg-gold transition-all duration-1000 ease-in-out" />

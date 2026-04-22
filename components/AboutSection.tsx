@@ -22,7 +22,7 @@ export default function AboutSection() {
             Fighting Cancer with{" "}
             <span className="italic text-gold">Prevention</span> & Technology
           </h2>
-          <p className="font-body text-base text-muted-foreground leading-relaxed font-light">
+          <p className="font-body text-base text-muted-foreground leading-relaxed ">
             The Cancer Free Blockchain Powered Foundation is a registered NGO in Kenya dedicated to
             defeating cancer through prevention. We believe cancer can be won in the kitchen as much as
             in the hospital — and we use blockchain to ensure every shilling is accounted for.

@@ -31,7 +31,7 @@ export default function BlockchainSection() {
           <span className="font-body text-xs font-medium tracking-[0.2em] uppercase text-gold">
             Technology for Trust
           </span>
-          <h2 className="font-display text-4xl md:text-6xl font-light text-foreground mt-4 mb-6 tracking-tight">
+          <h2 className="font-display text-4xl md:text-6xl text-foreground mt-4 mb-6 tracking-tight">
             Blockchain-Powered <span className="italic text-gold">Transparency</span>
           </h2>
           <p className="font-body text-base text-muted-foreground max-w-2xl mx-auto font-light leading-relaxed">

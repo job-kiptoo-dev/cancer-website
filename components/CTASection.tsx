@@ -23,10 +23,10 @@ export default function CTASection() {
           <div className="w-14 h-14 rounded-sm bg-gold/10 flex items-center justify-center mx-auto mb-8">
             <Heart size={24} className="text-gold" />
           </div>
-          <h2 className="font-display text-4xl md:text-6xl font-light text-foreground mb-8 tracking-tight">
+          <h2 className="font-display text-4xl md:text-6xl  text-foreground mb-8 tracking-tight">
             Join the <span className="italic text-gold">Movement</span>
           </h2>
-          <p className="font-body text-base text-muted-foreground max-w-2xl mx-auto mb-12 leading-relaxed font-light">
+          <p className="font-body text-base text-muted-foreground max-w-2xl mx-auto mb-12 leading-relaxed ">
             Every donation is blockchain-tracked. Every shilling is accounted for. Every family you support
             gets nutritious food, medication, shelter, and their children stay in school.
             <strong className="text-gold font-medium"> Be the change.</strong>

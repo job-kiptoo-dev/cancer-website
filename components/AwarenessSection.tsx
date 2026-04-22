@@ -32,7 +32,7 @@ export default function AwarenessSection() {
           <h2 className="font-display text-4xl md:text-6xl font-light text-foreground mt-4 mb-6 tracking-tight">
             Prevention Starts in the <span className="italic text-gradient-gold">Kitchen</span>
           </h2>
-          <p className="font-body text-base text-muted-foreground max-w-2xl mx-auto font-light leading-relaxed">
+          <p className="font-body text-base text-muted-foreground max-w-2xl mx-auto  leading-relaxed">
             Up to 40% of cancer cases can be prevented through lifestyle choices. We equip families
             with practical, affordable nutrition knowledge.
           </p>

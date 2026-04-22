@@ -134,7 +134,7 @@ function MemberCard({ member }: { member: TeamMember }) {
                   <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="hsl(150 10% 25%)" strokeWidth={1}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M12 4v16m8-8H4" />
                   </svg>
-                  <span style={{ fontSize: "9px", textTransform: "uppercase", letterSpacing: "0.2em", color: "hsl(150 10% 35%)", fontFamily: "var(--font-body)" }}>
+                  <span style={{ fontSize: "10px", textTransform: "uppercase", letterSpacing: "0.2em", color: "hsl(150 10% 35%)", fontFamily: "var(--font-body)" }}>
                     Coming soon
                   </span>
                 </>
@@ -154,7 +154,7 @@ function MemberCard({ member }: { member: TeamMember }) {
               background: member.isFounder ? "hsl(42 45% 65% / 0.6)" : "hsl(338 65% 62% / 0.5)",
             }} />
             <span style={{
-              fontSize: "9px",
+              fontSize: "15px",
               textTransform: "uppercase",
               letterSpacing: "0.22em",
               fontFamily: "var(--font-body)",
@@ -168,11 +168,11 @@ function MemberCard({ member }: { member: TeamMember }) {
           {/* Name */}
           <div>
             <h3 className="font-display font-light text-foreground leading-tight"
-              style={{ fontSize: member.isFounder ? "1.5rem" : "1.2rem" }}>
+              style={{ fontSize: member.isFounder ? "2rem" : "1.5rem" }}>
               {member.name}
             </h3>
             {member.title && (
-              <p className="font-body text-muted-foreground mt-1" style={{ fontSize: "11px", lineHeight: 1.5 }}>
+              <p className="font-body text-muted-foreground mt-1" style={{ fontSize: "1.5rem", lineHeight: 1.5 }}>
                 {member.title}
               </p>
             )}
@@ -182,7 +182,7 @@ function MemberCard({ member }: { member: TeamMember }) {
           {member.statement && (
             <blockquote className="font-display italic text-foreground/75 leading-relaxed pl-4"
               style={{
-                fontSize: "0.875rem",
+                fontSize: "1.05rem",
                 borderLeft: `2px solid ${member.isFounder ? "hsl(42 45% 65% / 0.35)" : "hsl(338 65% 62% / 0.3)"}`,
               }}>
               &ldquo;{member.statement}&rdquo;
@@ -210,7 +210,7 @@ export default function Founders() {
         <div className="text-center mb-14">
           <div className="flex items-center justify-center gap-4 mb-6">
             <div className="h-px flex-1 max-w-[72px]" style={{ background: "linear-gradient(to right, transparent, hsl(42 45% 65% / 0.35))" }} />
-            <span className="font-body text-muted-foreground" style={{ fontSize: "10px", textTransform: "uppercase", letterSpacing: "0.25em" }}>
+            <span className="font-body text-muted-foreground" style={{ fontSize: "18px", textTransform: "uppercase", letterSpacing: "0.25em" }}>
               The People Behind the Mission
             </span>
             <div className="h-px flex-1 max-w-[72px]" style={{ background: "linear-gradient(to left, transparent, hsl(42 45% 65% / 0.35))" }} />
@@ -230,7 +230,7 @@ export default function Founders() {
           </h2>
 
           <p className="font-body text-muted-foreground leading-relaxed mx-auto"
-            style={{ fontSize: "0.82rem", maxWidth: "380px" }}>
+            style={{ fontSize: "1.01rem", maxWidth: "380px" }}>
             A team of medical experts, technologists, and advocates united by
             one purpose — a world free from cancer.
           </p>
@@ -256,7 +256,7 @@ export default function Founders() {
             <path strokeLinecap="round" strokeLinejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
             <path strokeLinecap="round" strokeLinejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
           </svg>
-          <span className="font-body text-muted-foreground text-center" style={{ fontSize: "11px" }}>
+          <span className="font-body text-muted-foreground text-center" style={{ fontSize: "1.02rem" }}>
             Zuhura Place Building, Opp. Quickmart, 4th Floor — Thika Town, Kenya
           </span>
         </div>

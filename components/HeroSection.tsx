@@ -254,7 +254,7 @@ export default function HeroSection() {
                 src={heroBg}
                 alt="Community impact"
                 fill
-                className="object-cover opacity-40 mix-blend-luminosity"
+                className="object-cover opacity-70 "
               />
               <div
                 className="absolute inset-0"

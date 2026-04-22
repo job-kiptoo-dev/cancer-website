@@ -28,11 +28,11 @@ export default function ImpactSection() {
           transition={{ duration: 0.8 }}
           className="text-center mb-20"
         >
-          <span className="font-body text-xs font-medium tracking-[0.2em] uppercase text-gold">
+          <span className="font-body text-sm font-medium tracking-[0.2em] uppercase text-gold">
             Core Objectives
           </span>
-          <h2 className="font-display text-4xl md:text-6xl font-light text-foreground mt-4 tracking-tight">
-            Our Roadmap to <span className="italic text-gold">Impact</span>
+          <h2 className="font-display text-4xl md:text-6xl  text-foreground mt-4 tracking-tight">
+            Our Roadmap to <span className="italic text-pink-200">Impact</span>
           </h2>
         </motion.div>
 
