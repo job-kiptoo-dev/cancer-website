@@ -54,7 +54,7 @@ export default function HeroSection() {
                     whileHover={{ scale: 1.05 }}
                     className="group flex items-center gap-4 bg-foreground text-background px-10 py-5 rounded-full"
                   >
-                    <span className="font-body font-semibold uppercase tracking-widest text-xs"> Learn Our Mission </span>
+                    <span className="font-body font-semibold uppercase tracking-widest text-xs"> Learn About Our Mission </span>
                     <ArrowUpRight size={15} className="group-hover:rotate-45 transition-transform duration-300" />
                   </motion.button>
                   </a>
