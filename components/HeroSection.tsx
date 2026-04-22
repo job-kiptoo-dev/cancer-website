@@ -49,13 +49,15 @@ export default function HeroSection() {
                     We’re using technology to bridge the gap between marginalized Kenyan families and life-saving prevention.
                   </p>
                   
+                    <a href="#about">
                   <motion.button 
                     whileHover={{ scale: 1.05 }}
                     className="group flex items-center gap-4 bg-foreground text-background px-10 py-5 rounded-full"
                   >
-                    <span className="font-body font-semibold uppercase tracking-widest text-xs">Start a Mission</span>
-                    <ArrowUpRight size={20} className="group-hover:rotate-45 transition-transform duration-300" />
+                    <span className="font-body font-semibold uppercase tracking-widest text-xs"> Learn Our Mission </span>
+                    <ArrowUpRight size={15} className="group-hover:rotate-45 transition-transform duration-300" />
                   </motion.button>
+                  </a>
                 </div>
               </motion.div>
             </div>
