@@ -3,24 +3,24 @@
 
 @theme {
   /* ── Core palette ────────────────────────────────── */
-  --color-background: hsl(340 20% 4%);          /* deep rose-black */
-  --color-foreground: hsl(340 15% 94%);          /* warm white */
-  --color-card: hsl(340 18% 7%);
-  --color-card-foreground: hsl(340 15% 94%);
-  --color-popover: hsl(340 18% 7%);
-  --color-popover-foreground: hsl(340 15% 94%);
+  --color-background: hsl(40 50% 95%);           /* cream white */
+  --color-foreground: hsl(340 15% 20%);          /* dark rose */
+  --color-card: hsl(0 0% 100%);                  /* white */
+  --color-card-foreground: hsl(340 15% 20%);
+  --color-popover: hsl(0 0% 100%);               /* white */
+  --color-popover-foreground: hsl(340 15% 20%);
   --color-primary: hsl(338 65% 58%);             /* pink — primary action */
   --color-primary-foreground: hsl(340 15% 96%);
   --color-secondary: hsl(42 45% 65%);            /* gold — secondary accent */
   --color-secondary-foreground: hsl(340 20% 4%);
-  --color-muted: hsl(340 12% 10%);
-  --color-muted-foreground: hsl(340 8% 62%);
-  --color-accent: hsl(338 30% 12%);              /* pink-tinted surface */
-  --color-accent-foreground: hsl(338 60% 75%);
+  --color-muted: hsl(340 5% 60%);
+  --color-muted-foreground: hsl(340 5% 40%);
+  --color-accent: hsl(338 65% 58%);              /* pink accent */
+  --color-accent-foreground: hsl(0 0% 100%);
   --color-destructive: hsl(0 72% 58%);
-  --color-destructive-foreground: hsl(340 15% 94%);
-  --color-border: hsl(338 15% 14%);              /* pink-tinted border */
-  --color-input: hsl(340 12% 10%);
+  --color-destructive-foreground: hsl(0 0% 100%);
+  --color-border: hsl(340 15% 85%);              /* light border */
+  --color-input: hsl(0 0% 100%);                 /* white input */
   --color-ring: hsl(338 65% 58%);                /* pink focus ring */
 
   /* ── Pink scale ──────────────────────────────────── */
@@ -33,16 +33,16 @@
   --color-pink-800: hsl(338 50% 22%);
   --color-pink-soft: hsl(338 45% 72%);
   --color-pink-glow: hsl(338 65% 58% / 0.22);
-  --color-pink-subtle: hsl(338 30% 10%);
+  --color-pink-subtle: hsl(338 65% 90%);
 
   /* ── Gold scale ──────────────────────────────────── */
   --color-gold: hsl(42 45% 65%);
   --color-gold-glow: hsl(42 50% 78%);
-  --color-gold-subtle: hsl(42 30% 10%);
+  --color-gold-subtle: hsl(42 30% 90%);
 
   /* ── Surfaces ────────────────────────────────────── */
-  --color-obsidian: hsl(340 20% 4%);
-  --color-rose-glass: hsl(338 35% 9%);
+  --color-obsidian: hsl(40 50% 95%);
+  --color-rose-glass: hsl(338 40% 95%);
 
   /* ── Radius — sharp, editorial ───────────────────── */
   --radius-lg: 0.25rem;
@@ -87,16 +87,16 @@
   ::-webkit-scrollbar { width: 5px; }
   ::-webkit-scrollbar-track { background: var(--color-background); }
   ::-webkit-scrollbar-thumb {
-    background: hsl(338 40% 22%);
+    background: hsl(338 65% 62%);
     border-radius: 3px;
   }
   ::-webkit-scrollbar-thumb:hover {
-    background: hsl(338 55% 38%);
+    background: hsl(338 65% 52%);
   }
 
   /* Pink text selection */
   ::selection {
-    background: hsl(338 65% 58% / 0.28);
+    background: hsl(338 65% 58% / 0.18);
     color: var(--color-foreground);
   }
 }
@@ -157,13 +157,13 @@
 
 /* ── Glass surfaces ────────────────────────────────── */
 @utility bg-glass {
-  background: hsl(338 35% 9% / 0.5);
+  background: hsl(0 0% 100% / 0.7);
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
 }
 
 @utility bg-glass-pink {
-  background: hsl(338 40% 10% / 0.6);
+  background: hsl(338 65% 95% / 0.8);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
 }
