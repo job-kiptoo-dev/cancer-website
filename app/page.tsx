@@ -3,6 +3,7 @@ import AwarenessSection from "@/components/AwarenessSection";
 import BlockchainSection from "@/components/BlockchainSection";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
+import Founders from "@/components/Founders";
 import HeroSection from "@/components/HeroSection";
 import ImpactSection from "@/components/ImpactSection";
 import Navbar from "@/components/Navbar";
@@ -20,6 +21,7 @@ export default function Home() {
     <AwarenessSection />
     <BlockchainSection />
     <ImpactSection />
+    <Founders/>
     <CTASection />
     <Footer />
     </div>

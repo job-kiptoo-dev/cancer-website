@@ -1,91 +1,249 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..400&family=Manrope:wght@200..700&display=swap');
-
 @import "tailwindcss";
 
-/* 1. Theme Configuration (The v4 way) */
 @theme {
-  /* Default Shadcn Colors - Mapped to your HSL values */
-  --color-background: hsl(150 30% 2%);
-  --color-foreground: hsl(40 10% 92%);
+  /* ── Core palette ────────────────────────────────── */
+  --color-background: hsl(340 20% 4%);          /* deep rose-black */
+  --color-foreground: hsl(340 15% 94%);          /* warm white */
+  --color-card: hsl(340 18% 7%);
+  --color-card-foreground: hsl(340 15% 94%);
+  --color-popover: hsl(340 18% 7%);
+  --color-popover-foreground: hsl(340 15% 94%);
+  --color-primary: hsl(338 65% 58%);             /* pink — primary action */
+  --color-primary-foreground: hsl(340 15% 96%);
+  --color-secondary: hsl(42 45% 65%);            /* gold — secondary accent */
+  --color-secondary-foreground: hsl(340 20% 4%);
+  --color-muted: hsl(340 12% 10%);
+  --color-muted-foreground: hsl(340 8% 62%);
+  --color-accent: hsl(338 30% 12%);              /* pink-tinted surface */
+  --color-accent-foreground: hsl(338 60% 75%);
+  --color-destructive: hsl(0 72% 58%);
+  --color-destructive-foreground: hsl(340 15% 94%);
+  --color-border: hsl(338 15% 14%);              /* pink-tinted border */
+  --color-input: hsl(340 12% 10%);
+  --color-ring: hsl(338 65% 58%);                /* pink focus ring */
 
-  --color-card: hsl(150 25% 5%);
-  --color-card-foreground: hsl(40 10% 92%);
+  /* ── Pink scale ──────────────────────────────────── */
+  --color-pink-50:  hsl(338 60% 96%);
+  --color-pink-100: hsl(338 65% 90%);
+  --color-pink-200: hsl(338 62% 78%);
+  --color-pink-400: hsl(338 65% 62%);            /* main pink */
+  --color-pink-500: hsl(338 65% 55%);
+  --color-pink-600: hsl(338 60% 46%);
+  --color-pink-800: hsl(338 50% 22%);
+  --color-pink-soft: hsl(338 45% 72%);
+  --color-pink-glow: hsl(338 65% 58% / 0.22);
+  --color-pink-subtle: hsl(338 30% 10%);
 
-  --color-popover: hsl(150 25% 5%);
-  --color-popover-foreground: hsl(40 10% 92%);
+  /* ── Gold scale ──────────────────────────────────── */
+  --color-gold: hsl(42 45% 65%);
+  --color-gold-glow: hsl(42 50% 78%);
+  --color-gold-subtle: hsl(42 30% 10%);
 
-  --color-primary: hsl(150 30% 8%);
-  --color-primary-foreground: hsl(40 10% 92%);
+  /* ── Surfaces ────────────────────────────────────── */
+  --color-obsidian: hsl(340 20% 4%);
+  --color-rose-glass: hsl(338 35% 9%);
 
-  --color-secondary: hsl(42 45% 65%);
-  --color-secondary-foreground: hsl(150 30% 2%);
-
-  --color-muted: hsl(150 15% 8%);
-  --color-muted-foreground: hsl(150 15% 55%);
-
-  --color-accent: hsl(150 20% 10%);
-  --color-accent-foreground: hsl(42 45% 75%);
-
-  --color-destructive: hsl(0 84.2% 60.2%);
-  --color-destructive-foreground: hsl(40 10% 92%);
-
-  --color-border: hsl(150 10% 12%);
-  --color-input: hsl(150 10% 12%);
-  --color-ring: hsl(42 45% 65%);
-
+  /* ── Radius — sharp, editorial ───────────────────── */
   --radius-lg: 0.25rem;
   --radius-md: calc(0.25rem - 2px);
   --radius-sm: calc(0.25rem - 4px);
 
-  /* Custom Premium Tokens */
-  --color-gold: hsl(42 45% 65%);
-  --color-gold-glow: hsl(42 50% 78%);
-  --color-obsidian: hsl(150 30% 2%);
-  --color-emerald-glass: hsl(152 40% 8%);
-
-  /* Custom Fonts */
+  /* ── Fonts ───────────────────────────────────────── */
   --font-display: "Cormorant Garamond", Georgia, serif;
   --font-body: "Manrope", system-ui, sans-serif;
 
-  /* Custom Shadows */
-  --shadow-soft: 0 4px 20px -4px hsl(0 0% 0% / 0.4);
+  /* ── Shadows ─────────────────────────────────────── */
+  --shadow-soft:      0 4px 24px -4px hsl(0 0% 0% / 0.5);
+  --shadow-glow-pink: 0 8px 32px -6px hsl(338 65% 58% / 0.28);
   --shadow-glow-gold: 0 8px 30px -6px hsl(42 45% 65% / 0.2);
+  --shadow-glow-duo:  0 8px 32px -6px hsl(338 65% 58% / 0.18), 0 4px 16px -4px hsl(42 45% 65% / 0.12);
 }
 
-/* 2. Base Styles */
+/* ── Base ──────────────────────────────────────────── */
 @layer base {
-
   * {
     @apply border-border outline-ring/50;
   }
 
   body {
     @apply bg-background text-foreground font-body antialiased;
+    font-size: 16px;
+    line-height: 1.7;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-display;
+    font-family: var(--font-display);
+    font-weight: 300;
+    line-height: 1.2;
+    color: var(--color-foreground);
+  }
+
+  p, li, span, label, input, textarea, button {
+    font-family: var(--font-body);
+  }
+
+  /* Pink scrollbar */
+  ::-webkit-scrollbar { width: 5px; }
+  ::-webkit-scrollbar-track { background: var(--color-background); }
+  ::-webkit-scrollbar-thumb {
+    background: hsl(338 40% 22%);
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(338 55% 38%);
+  }
+
+  /* Pink text selection */
+  ::selection {
+    background: hsl(338 65% 58% / 0.28);
+    color: var(--color-foreground);
   }
 }
 
-/* 3. Custom Utilities (The v4 @utility directive) */
+/* ── Text gradients ────────────────────────────────── */
+@utility text-gradient-pink {
+  background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(135deg, var(--color-pink-400), var(--color-pink-soft));
+}
+
 @utility text-gradient-gold {
   background-clip: text;
   color: transparent;
   background-image: linear-gradient(135deg, var(--color-gold), var(--color-gold-glow));
 }
 
+@utility text-gradient-duo {
+  background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(135deg, var(--color-pink-400), var(--color-gold));
+}
+
+/* ── Divider lines ─────────────────────────────────── */
+@utility line-pink {
+  height: 1px;
+  width: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    hsl(338 65% 58% / 0.4),
+    transparent
+  );
+}
+
+@utility line-gold {
+  height: 1px;
+  width: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    hsl(42 45% 65% / 0.3),
+    transparent
+  );
+}
+
+@utility line-duo {
+  height: 1px;
+  width: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    hsl(338 65% 58% / 0.35),
+    hsl(42 45% 65% / 0.25),
+    transparent
+  );
+}
+
+/* ── Glass surfaces ────────────────────────────────── */
 @utility bg-glass {
-  background: hsl(var(--color-emerald-glass) / 0.4);
+  background: hsl(338 35% 9% / 0.5);
   backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+}
+
+@utility bg-glass-pink {
+  background: hsl(338 40% 10% / 0.6);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+/* ── Glow shadows ──────────────────────────────────── */
+@utility shadow-glow-pink {
+  box-shadow: var(--shadow-glow-pink);
 }
 
 @utility shadow-glow-gold {
   box-shadow: var(--shadow-glow-gold);
 }
 
-@utility line-gold {
-  height: 1px;
-  width: 100%;
-  background: linear-gradient(90deg, transparent, hsl(var(--color-gold) / 0.3), transparent);
+@utility shadow-glow-duo {
+  box-shadow: var(--shadow-glow-duo);
+}
+
+/* ── Surface tints ─────────────────────────────────── */
+@utility bg-pink-subtle {
+  background-color: var(--color-pink-subtle);
+}
+
+@utility bg-gold-subtle {
+  background-color: var(--color-gold-subtle);
+}
+
+@utility bg-rose-glass {
+  background-color: var(--color-rose-glass);
+}
+
+/* ── Text colours ──────────────────────────────────── */
+@utility text-pink {
+  color: var(--color-pink-400);
+}
+
+@utility text-pink-soft {
+  color: var(--color-pink-soft);
+}
+
+@utility text-gold {
+  color: var(--color-gold);
+}
+
+/* ── Border helpers ────────────────────────────────── */
+@utility border-pink {
+  border-color: var(--color-pink-400);
+}
+
+@utility border-pink-soft {
+  border-color: hsl(338 65% 58% / 0.3);
+}
+
+@utility border-gold {
+  border-color: var(--color-gold);
+}
+
+/* ── Pink ribbon / awareness badge ────────────────── */
+@utility badge-pink {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: hsl(338 30% 10%);
+  color: var(--color-pink-soft);
+  border: 1px solid hsl(338 65% 58% / 0.25);
+  border-radius: var(--radius-lg);
+  font-family: var(--font-body);
+  font-size: 10px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  padding: 4px 12px;
+}
+
+/* ── Ribbon stripe (decorative, awareness) ─────────── */
+@utility ribbon-stripe {
+  background: repeating-linear-gradient(
+    -45deg,
+    hsl(338 65% 58% / 0.06),
+    hsl(338 65% 58% / 0.06) 1px,
+    transparent 1px,
+    transparent 8px
+  );
 }

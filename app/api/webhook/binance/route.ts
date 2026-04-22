@@ -1,7 +1,8 @@
 import { NextRequest, NextResponse } from "next/server";
 import { verifyWebhookSignature } from "@/lib/binance";
 import { Resend } from "resend";
-import DonationConfirmationEmail from "@/emails/DonationConfirmation";
+import DonationConfirmationEmail from "@/email/DonationConfirmation";
+// import DonationConfirmationEmail from "@/emails/DonationConfirmation";
 
 const resend = new Resend(process.env.RESEND_API_KEY!);
 
