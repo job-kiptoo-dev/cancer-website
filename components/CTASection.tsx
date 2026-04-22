@@ -2,7 +2,7 @@
 
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { Heart, ShieldCheck, ArrowRight, Mail } from "lucide-react";
+import { Heart, ArrowRight, ShieldCheck, Mail } from "lucide-react";
 import Link from "next/link";
 
 export default function CTASection() {
@@ -10,82 +10,94 @@ export default function CTASection() {
   const inView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="donate" className="py-32 bg-background relative overflow-hidden">
+    <section id="donate" className="py-35 bg-background relative overflow-hidden">
       
-      {/* Decorative vertical line */}
+      {/* ── The Vertical Thread ────────────────── */}
       <div className="absolute left-6 lg:left-10 top-0 bottom-0 w-px bg-border/20 hidden md:block" />
 
       <div className="container mx-auto px-6 lg:pl-32" ref={ref}>
         <div className="grid lg:grid-cols-12 gap-16 items-center">
           
-          {/* Left: The "Proof" Column */}
+          {/* Left Column: The Manifesto */}
           <motion.div 
             initial={{ opacity: 0, x: -30 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8 }}
-            className="lg:col-span-5 relative"
+            className="lg:col-span-6"
           >
-            <div className="absolute -top-10 -left-10 w-24 h-24 bg-gold/5 rounded-full blur-xl" />
-            <h2 className="font-display text-5xl md:text-7xl font-light text-foreground leading-[0.9] tracking-tighter mb-8">
+            <div className="badge-pink mb-8 inline-flex items-center gap-2">
+              <ShieldCheck size={12} />
+              <span className="text-[10px] uppercase tracking-widest font-bold">On-Chain Verified</span>
+            </div>
+
+            <h2 className="font-display text-6xl md:text-8xl font-light text-foreground leading-[0.85] tracking-tighter mb-10">
               Join the <br />
-              <span className="italic text-gradient-gold">Movement.</span>
+              <span className="italic text-pink-500">Movement.</span>
             </h2>
-            
-            <div className="flex items-start gap-4 mb-8">
-              <ShieldCheck className="text-gold mt-1 flex-shrink-0" size={24} />
-              <div>
-                <p className="text-foreground font-display text-sm tracking-widest uppercase">Verified Transparency</p>
-                <p className="text-muted-foreground text-sm leading-relaxed mt-1">
-                  Every transaction is hashed, recorded, and viewable on-chain. Your support is guaranteed to reach the mission.
-                </p>
+
+            <div className="space-y-6 max-w-md">
+              <p className="font-body text-xl text-muted-foreground font-light leading-relaxed">
+                We are re-engineering hope. Every shilling is a hashed commitment to a Kenyan family's survival.
+              </p>
+              
+              <div className="flex items-center gap-4 text-gold py-4 border-y border-border/40">
+                <div className="w-2 h-2 rounded-full bg-gold animate-pulse" />
+                <span className="font-display text-xs uppercase tracking-[0.2em]">Live Mission Updates: 400+ Families Supported</span>
               </div>
             </div>
           </motion.div>
 
-          {/* Right: The Conversion Column */}
+          {/* Right Column: The "Action Card" */}
           <motion.div 
-            initial={{ opacity: 0, y: 30 }}
-            animate={inView ? { opacity: 1, y: 0 } : {}}
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={inView ? { opacity: 1, scale: 1 } : {}}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="lg:col-span-7 bg-card border border-border p-12 md:p-16 relative group"
+            className="lg:col-span-6 relative"
           >
-            <div className="absolute top-0 right-0 w-32 h-32 border-t-2 border-r-2 border-gold/30" />
+            {/* Decorative Glass Background */}
+            <div className="absolute inset-0 bg-card border border-border -rotate-1 hidden lg:block" />
             
-            <p className="font-body text-xl text-muted-foreground leading-relaxed mb-12">
-              Every shilling empowers a family. We aren't just an NGO; we are a 
-              <span className="text-foreground font-semibold"> decentralized health protocol</span> 
-              focused on life, shelter, and educational equity.
-            </p>
+            <div className="relative z-10 bg-card border border-border p-10 md:p-16 shadow-2xl">
+              <p className="font-body text-lg text-foreground/80 leading-relaxed mb-12 italic border-l-2 border-pink-500 pl-6">
+                "Every donation ensures nutritious food, medication, shelter, and keeping children in school. Be the change that is recorded forever."
+              </p>
 
-            <div className="flex flex-col sm:flex-row gap-6">
-              <Link
-                href="/donate"
-                className="group/btn flex-1 flex items-center justify-center gap-3 px-8 py-5 bg-foreground text-background font-body font-semibold tracking-widest text-xs uppercase transition-all duration-500"
-              >
-                Donate Now
-                <ArrowRight size={16} className="group-hover/btn:translate-x-2 transition-transform" />
-              </Link>
-              
-              <a
-                href="mailto:info@cancerfreeblockchain.org"
-                className="flex-1 flex items-center justify-center gap-3 px-8 py-5 border border-border text-foreground font-body font-semibold tracking-widest text-xs uppercase hover:border-gold/50 transition-all duration-500"
-              >
-                <Mail size={16} className="text-gold" />
-                Partner With Us
-              </a>
-            </div>
+              <div className="flex flex-col gap-4">
+                <Link
+                  href="/donate"
+                  className="group flex items-center justify-center gap-4 bg-foreground text-background px-10 py-6 rounded-sm transition-all duration-500 hover:bg-pink-600 hover:text-white"
+                >
+                  <Heart size={18} className="group-hover:scale-125 transition-transform" />
+                  <span className="font-body font-bold uppercase tracking-widest text-xs">Donate to the Mission</span>
+                  <ArrowRight size={16} className="opacity-0 group-hover:opacity-100 group-hover:translate-x-2 transition-all" />
+                </Link>
+                
+                <a
+                  href="mailto:info@cancerfreeblockchain.org"
+                  className="group flex items-center justify-center gap-4 border border-border px-10 py-6 rounded-sm hover:border-gold/50 transition-all duration-500"
+                >
+                  <Mail size={18} className="text-gold" />
+                  <span className="font-body font-bold uppercase tracking-widest text-xs">Partner With Us</span>
+                </a>
+              </div>
 
-            {/* Micro-label */}
-            <div className="mt-10 flex items-center gap-2 justify-center lg:justify-start">
-              <div className="w-1.5 h-1.5 rounded-full bg-gold animate-pulse" />
-              <span className="text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
-                Currently Supporting 400+ Families
-              </span>
+              {/* Technical Footnote */}
+              <div className="mt-12 pt-8 border-t border-border/40 flex justify-between items-center">
+                <span className="text-[9px] uppercase tracking-[0.3em] text-muted-foreground/60">Transparency Protocol v2.1</span>
+                <div className="flex gap-1">
+                  {[1, 2, 3].map((i) => (
+                    <div key={i} className="w-1 h-1 bg-pink-500/20 rounded-full" />
+                  ))}
+                </div>
+              </div>
             </div>
           </motion.div>
 
         </div>
       </div>
+
+      {/* Decorative Background Glow */}
+      <div className="absolute -bottom-40 -left-40 w-[600px] h-[600px] bg-pink-500/5 rounded-full blur-[120px] pointer-events-none" />
     </section>
   );
 }

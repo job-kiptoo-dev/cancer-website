@@ -32,13 +32,13 @@ export default function BlockchainSection() {
   const inView = useInView(ref, { once: true, margin: "-80px" });
 
   return (
-    <section id="blockchain" className="py-28 relative bg-background overflow-hidden">
+    <section id="blockchain" className="py-15 relative bg-background overflow-hidden">
       {/* Decorative Branding Watermark */}
       <div className="absolute -right-20 top-20 opacity-[0.03] rotate-12 pointer-events-none">
         <Fingerprint size={400} strokeWidth={0.5} className="text-pink-600" />
       </div>
 
-      <div className="line-duo mb-28 opacity-40" />
+      <div className="line-duo mb-17 opacity-40" />
 
       <div className="container mx-auto px-6 lg:px-10" ref={ref}>
         <motion.div
