@@ -70,7 +70,7 @@ export default function HeroSection() {
                 transition={{ delay: 0.5, duration: 1.2 }}
                 className="relative aspect-[3/4] lg:aspect-auto lg:h-[600px] w-full bg-card border border-border overflow-hidden"
                >
-                 <Image src={heroBg} alt="Kenya" fill className="object-cover opacity-90 hover:scale-105 transition-transform duration-[3s]" />
+                 <Image src={heroBg} alt="Kenya" quality={100} fill className="object-cover opacity-[100] hover:scale-105 transition-transform duration-[3s]" />
                  <div className="absolute inset-0 bg-gradient-to-t from-background to-transparent" />
                  
                  <div className="absolute bottom-10 left-10 right-10 space-y-6">
