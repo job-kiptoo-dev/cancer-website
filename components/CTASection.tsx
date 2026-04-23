@@ -42,7 +42,7 @@ export default function CTASection() {
               
               <div className="flex items-center gap-4 text-gold py-4 border-y border-border/40">
                 <div className="w-2 h-2 rounded-full bg-gold animate-pulse" />
-                <span className="font-display text-xs uppercase tracking-[0.2em]">Live Mission Updates: 400+ Families Supported</span>
+                <span className="font-display text-xs uppercase tracking-[0.2em]">Live Mission Updates: Of Supported  Families</span>
               </div>
             </div>
           </motion.div>
